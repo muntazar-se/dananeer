@@ -1,0 +1,288 @@
+/* ==============================================================================
+   Dananir Brand Component Styling
+   ============================================================================== */
+.dananir-brand-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+  text-decoration: none;
+}
+
+.brand-symbol {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 8px rgba(195, 147, 46, 0.2));
+  transition: transform var(--transition-fast);
+}
+
+.dananir-brand-container:hover .brand-symbol {
+  transform: scale(1.05);
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.brand-wordmark-ar {
+  font-family: var(--font-arabic-heading);
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  color: var(--brand-dark);
+}
+
+.brand-wordmark-en {
+  font-family: var(--font-arabic-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--brand-gold-600);
+  margin-top: 3px;
+}
+
+.brand-light .brand-wordmark-ar {
+  color: #FFFFFF;
+}
+
+.brand-light .brand-wordmark-en {
+  color: var(--brand-gold-300);
+}
+
+/* ==============================================================================
+   Buttons & CTAs
+   ============================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-arabic-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--brand-gold-gradient);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(195, 147, 46, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.07);
+  box-shadow: 0 6px 20px rgba(195, 147, 46, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background: var(--brand-dark);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(11, 15, 25, 0.25);
+  border: 1px solid var(--brand-dark-border);
+}
+
+.btn-dark:hover {
+  background: var(--brand-dark-surface);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(11, 15, 25, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--brand-dark);
+  border: 1.5px solid var(--border-subtle);
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-dark);
+  background: rgba(11, 15, 25, 0.03);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+  color: var(--brand-dark);
+  background: var(--bg-subtle);
+}
+
+.btn-lg {
+  padding: 16px 34px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-lg);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ==============================================================================
+   Cards & Surfaces
+   ============================================================================== */
+.card-base {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.card-hover:hover {
+  border-color: var(--brand-gold-300);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.card-dark {
+  background: var(--brand-dark-card);
+  border: 1px solid var(--brand-dark-border);
+  color: #FFFFFF;
+}
+
+/* ==============================================================================
+   Modal System
+   ============================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.72);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-dialog {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-2xl);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-dialog-large {
+  max-width: 960px;
+}
+
+.modal-header {
+  padding: 24px 28px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.modal-close-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  background: var(--bg-subtle);
+}
+
+.modal-close-btn:hover {
+  background: #E2E8F0;
+  color: var(--brand-dark);
+}
+
+.modal-body {
+  padding: 28px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--brand-dark);
+  margin-bottom: 8px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  color: var(--text-primary);
+  font-size: 0.96rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--brand-gold-500);
+  box-shadow: 0 0 0 3px rgba(195, 147, 46, 0.18);
+}
+
+/* ==============================================================================
+   Keyframe Animations
+   ============================================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

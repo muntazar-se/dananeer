@@ -1,0 +1,74 @@
+:root {
+  /* Brand Primary Dark */
+  --brand-dark: #0B0F19;
+  --brand-dark-surface: #111827;
+  --brand-dark-card: #182234;
+  --brand-dark-border: #232F46;
+  --brand-dark-hover: #1E293B;
+
+  /* Brand Secondary Gold (Modern, Warm, Sophisticated) */
+  --brand-gold-50: #FAF7EE;
+  --brand-gold-100: #F4ECCF;
+  --brand-gold-200: #E8D8A0;
+  --brand-gold-300: #DCBE6F;
+  --brand-gold-400: #D4A83E;
+  --brand-gold-500: #C3932E;
+  --brand-gold-600: #A67920;
+  --brand-gold-700: #855E16;
+  --brand-gold-gradient: linear-gradient(135deg, #DEB853 0%, #C3932E 50%, #9C721D 100%);
+  --brand-gold-gradient-subtle: linear-gradient(135deg, rgba(222, 184, 83, 0.12) 0%, rgba(195, 147, 46, 0.05) 100%);
+  --brand-gold-glow: 0 4px 20px rgba(195, 147, 46, 0.28);
+
+  /* Controlled Accent (Commerce Emerald) */
+  --brand-emerald-50: #ECFDF5;
+  --brand-emerald-100: #D1FAE5;
+  --brand-emerald-500: #10B981;
+  --brand-emerald-600: #059669;
+  --brand-emerald-700: #047857;
+
+  /* Neutrals & Surfaces */
+  --bg-body: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-muted: #E2E8F0;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-light: #F8FAFC;
+  --text-light-muted: #94A3B8;
+
+  --border-subtle: #E2E8F0;
+  --border-card: #EAEFF5;
+  --border-focus: #C3932E;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.09);
+  --shadow-xl: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --shadow-2xl: 0 25px 60px -15px rgba(11, 15, 25, 0.2);
+  --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.35);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-arabic-heading: var(--font-alexandria), 'Alexandria', 'Cairo', sans-serif;
+  --font-arabic-body: var(--font-ibm-plex), 'IBM Plex Sans Arabic', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Container */
+  --container-max-w: 1240px;
+  --container-px: 24px;
+}
