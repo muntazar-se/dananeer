@@ -32,7 +32,8 @@ import Navbar from '@/components/Navbar';
 import DananirBrand from '@/components/DananirBrand';
 import OnboardingModal from '@/components/OnboardingModal';
 import LiveStoreModal from '@/components/LiveStoreModal';
-import PaletteSwitcher from '@/components/PaletteSwitcher';
+import { LiveBrandStudio } from '@/components/studio/LiveBrandStudio';
+import { PatternBackground } from '@/components/brand/PatternBackground';
 
 export default function LandingPage() {
   const [isOnboardOpen, setIsOnboardOpen] = useState(false);
@@ -104,7 +105,8 @@ export default function LandingPage() {
 
       <main>
         {/* SECTION 02 — HERO */}
-        <section className="hero-section">
+        <section className="hero-section" style={{ position: 'relative', overflow: 'hidden' }}>
+          <PatternBackground variant="aubergine-on-light" opacity={0.06} />
           <div className="hero-glow-element" />
 
           <div className="container">
@@ -1501,7 +1503,8 @@ export default function LandingPage() {
         </section>
 
         {/* SECTION 15 — FINAL CTA */}
-        <section className="section-padding final-cta-section">
+        <section className="section-padding final-cta-section" style={{ position: 'relative', overflow: 'hidden' }}>
+          <PatternBackground variant="lavender-on-aubergine" opacity={0.12} />
           <div className="final-cta-glow" />
 
           <div className="container">
@@ -1642,8 +1645,8 @@ export default function LandingPage() {
         initialStoreId={demoStoreId}
       />
 
-      {/* 50 Master Palettes Live Switcher */}
-      <PaletteSwitcher />
+      {/* Live Brand Customizer Studio (50 Colors · 25 Fonts · 35 Logos) */}
+      <LiveBrandStudio />
     </div>
   );
 }

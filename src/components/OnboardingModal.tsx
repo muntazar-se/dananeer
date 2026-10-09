@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { X, CheckCircle, Store, ArrowLeft, Loader2, Sparkles } from 'lucide-react';
 import DananirBrand from './DananirBrand';
+import { DananirSpinner } from './ui/DananirSpinner';
 
 interface OnboardingModalProps {
   isOpen: boolean;
@@ -82,6 +83,13 @@ export default function OnboardingModal({ isOpen, onClose }: OnboardingModalProp
         referenceNumber: data.referenceNumber,
         message: data.message,
       });
+
+      try {
+        const audio = new Audio('/sounds/order-chime.wav');
+        audio.play().catch(() => {});
+      } catch {
+        // audio playback fallback
+      }
     } catch (err: unknown) {
       if (err instanceof Error) {
         setErrorMsg(err.message);
@@ -360,10 +368,10 @@ export default function OnboardingModal({ isOpen, onClose }: OnboardingModalProp
                   style={{ width: '100%', padding: '15px' }}
                 >
                   {isLoading ? (
-                    <>
-                      <Loader2 size={18} className="animate-spin" />
-                      جاري إرسال الطلب...
-                    </>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                      <DananirSpinner size="xs" variant="white" />
+                      <span>جاري إرسال الطلب...</span>
+                    </span>
                   ) : (
                     <>
                       <span>تأكيد وبدء المتجر</span>

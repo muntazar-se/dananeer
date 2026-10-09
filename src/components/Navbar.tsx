@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowLeft, Sparkles, ExternalLink, Palette } from 'lucide-react';
+import { Menu, X, ArrowLeft, Sparkles, ExternalLink, SlidersHorizontal } from 'lucide-react';
 import DananirBrand from './DananirBrand';
+import { useBrandCustomizer } from '@/context/BrandCustomizerContext';
 
 interface NavbarProps {
   onOpenOnboard: () => void;
@@ -14,6 +15,22 @@ interface NavbarProps {
 export default function Navbar({ onOpenOnboard, onOpenDemo, onOpenPalettes }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  let brandCustomizer: any = null;
+  try {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    brandCustomizer = useBrandCustomizer();
+  } catch {
+    // context fallback
+  }
+
+  const handleOpenStudio = () => {
+    if (brandCustomizer) {
+      brandCustomizer.setIsStudioOpen(true);
+    } else if (onOpenPalettes) {
+      onOpenPalettes();
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,24 +67,22 @@ export default function Navbar({ onOpenOnboard, onOpenDemo, onOpenPalettes }: Na
 
         {/* CTA Actions */}
         <div className="nav-actions">
-          {onOpenPalettes && (
-            <button
-              onClick={onOpenPalettes}
-              className="btn btn-outline"
-              style={{
-                fontSize: '0.88rem',
-                padding: '9px 16px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 6,
-                borderColor: 'var(--brand-silver-300)',
-              }}
-              title="تغيير مجموعة الألوان (50 مجموعة)"
-            >
-              <Palette size={16} color="var(--brand-accent-500)" />
-              <span>الألوان (50)</span>
-            </button>
-          )}
+          <button
+            onClick={handleOpenStudio}
+            className="btn btn-outline"
+            style={{
+              fontSize: '0.88rem',
+              padding: '9px 16px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              borderColor: 'var(--brand-silver-300)',
+            }}
+            title="افتح استوديو الهوية البصرية (50 لون · 25 خط · 35 شعار)"
+          >
+            <SlidersHorizontal size={15} color="var(--brand-accent-500)" />
+            <span>استوديو الهوية</span>
+          </button>
 
           <button
             onClick={onOpenOnboard}
@@ -104,19 +119,17 @@ export default function Navbar({ onOpenOnboard, onOpenDemo, onOpenPalettes }: Na
           ))}
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 12 }}>
-            {onOpenPalettes && (
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenPalettes();
-                }}
-                className="btn btn-outline"
-                style={{ width: '100%', justifyContent: 'center', borderColor: 'var(--brand-silver-300)' }}
-              >
-                <Palette size={16} color="var(--brand-accent-500)" />
-                <span>مجموعات الألوان (50)</span>
-              </button>
-            )}
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                handleOpenStudio();
+              }}
+              className="btn btn-outline"
+              style={{ width: '100%', justifyContent: 'center', borderColor: 'var(--brand-silver-300)' }}
+            >
+              <SlidersHorizontal size={15} color="var(--brand-accent-500)" />
+              <span>استوديو الهوية البصرية (50x25x35)</span>
+            </button>
 
             <button
               onClick={() => {

@@ -16,6 +16,8 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   display: 'swap',
 });
 
+import BrandProviderWrapper from '@/components/BrandProviderWrapper';
+
 export const metadata: Metadata = {
   title: 'دنانير | من حساب إنستا… إلى متجر إلكتروني كامل',
   description:
@@ -46,7 +48,9 @@ export const metadata: Metadata = {
     description: 'من حساب إنستا… إلى متجر إلكتروني كامل للتاجر العراقي.',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/icons/icon-192.svg',
   },
 };
 
@@ -58,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={`${alexandria.variable} ${ibmPlexArabic.variable}`}>
       <body className="antialiased" suppressHydrationWarning>
-        {children}
+        <BrandProviderWrapper>{children}</BrandProviderWrapper>
       </body>
     </html>
   );

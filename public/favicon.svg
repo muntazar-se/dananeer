@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="dananir-fav-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F265B" />
+      <stop offset="100%" stop-color="#281130" />
+    </linearGradient>
+    <linearGradient id="dananir-fav-glow" x1="16" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E9E0F0" />
+      <stop offset="100%" stop-color="#9C7BB5" />
+    </linearGradient>
+    <filter id="fav-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Squircle rounded container -->
+  <rect width="64" height="64" rx="16" fill="url(#dananir-fav-bg)" />
+  <rect width="64" height="64" rx="16" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+
+  <!-- Dananir Growth Portal / Dal Mark -->
+  <g filter="url(#fav-shadow)">
+    <!-- Base D-curve -->
+    <path d="M 42 16 C 53 23, 56 39, 48 50 C 42 57, 30 58, 19 56 L 13 55 C 24 56, 38 55, 45 47 C 51 38, 49 25, 39 19 Z" fill="#C9C5CE" opacity="0.85" />
+    <path d="M 39 17 C 49 24, 51 38, 44 48 C 39 55, 27 57, 16 56 C 25 56, 37 54, 41 47 C 47 38, 44 26, 36 20 C 29 16, 21 18, 15 24 C 12 27, 10 32, 10 37 C 10 47, 18 55, 29 55 L 29 50 C 20 50, 15 43, 15 37 C 15 32, 17 29, 19 27 C 24 22, 31 20, 36 23 Z" fill="url(#dananir-fav-glow)" />
+    <!-- Center Value Pivot Dot -->
+    <circle cx="26" cy="37" r="5" fill="#FFFFFF" />
+    <!-- Commerce Base Bar -->
+    <path d="M 14 55 H 51" stroke="#E9E0F0" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+</svg>

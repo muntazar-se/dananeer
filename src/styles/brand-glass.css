@@ -1,0 +1,150 @@
+/* ============================================================
+   Apple Glass Effect System (macOS Sonoma / iOS 18 / visionOS)
+   Dananir (دنانير) Official Brand Identity System
+   ============================================================ */
+
+:root {
+  /* Apple Glass (Liquid Glass & Vibrancy) Design Tokens */
+  --apple-glass-ultra: rgba(255, 255, 255, 0.42);
+  --apple-glass-light: rgba(255, 255, 255, 0.65);
+  --apple-glass-regular: rgba(255, 255, 255, 0.74);
+  --apple-glass-thick: rgba(255, 255, 255, 0.86);
+  --apple-glass-dark: rgba(38, 18, 45, 0.82);
+  --apple-glass-dark-thick: rgba(30, 14, 36, 0.92);
+
+  --apple-glass-border-light: rgba(255, 255, 255, 0.72);
+  --apple-glass-border-subtle: rgba(255, 255, 255, 0.45);
+  --apple-glass-border-dark: rgba(255, 255, 255, 0.18);
+
+  --apple-specular-top: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.9);
+  --apple-specular-inner: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  --apple-specular-dark: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.35);
+
+  --apple-shadow-sm: 0 4px 16px -2px rgba(62, 31, 71, 0.05);
+  --apple-shadow-md: 0 12px 32px -6px rgba(62, 31, 71, 0.07);
+  --apple-shadow-lg: 0 20px 48px -10px rgba(62, 31, 71, 0.12);
+  --apple-shadow-dark: 0 25px 60px -12px rgba(20, 8, 25, 0.5);
+}
+
+/* Primary Apple Frosted Glass Material */
+.apple-glass {
+  background: var(--apple-glass-regular) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid var(--apple-glass-border-light) !important;
+  box-shadow: var(--apple-shadow-md), var(--apple-specular-top) !important;
+}
+
+/* Ultra-thin material for secondary floating badges and chips */
+.apple-glass-ultra {
+  background: var(--apple-glass-ultra) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border: 1px solid var(--apple-glass-border-subtle) !important;
+  box-shadow: var(--apple-shadow-sm), var(--apple-specular-top) !important;
+}
+
+/* Thick material for persistent surfaces */
+.apple-glass-thick {
+  background: var(--apple-glass-thick) !important;
+  backdrop-filter: blur(34px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(34px) saturate(200%) !important;
+  border: 1px solid var(--apple-glass-border-light) !important;
+  box-shadow: var(--apple-shadow-lg), var(--apple-specular-top) !important;
+}
+
+/* Apple Space Dark Glass */
+.apple-glass-dark {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-primary, #3E1F47) 90%, black), color-mix(in srgb, var(--brand-primary, #3E1F47) 70%, #100614)) !important;
+  backdrop-filter: blur(36px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(200%) !important;
+  border: 1px solid var(--apple-glass-border-dark) !important;
+  box-shadow: var(--apple-shadow-dark), var(--apple-specular-dark) !important;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+/* Interactive Apple Glass Cards */
+.apple-glass-interactive {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease !important;
+}
+.apple-glass-interactive:hover {
+  transform: translateY(-3px) !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  border-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 18px 45px -8px rgba(62, 31, 71, 0.12),
+              inset 0 1px 2px 0 rgba(255, 255, 255, 1) !important;
+}
+
+/* Apple Floating Island Navigation Header */
+.apple-glass-nav {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(30px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 10px 35px -5px rgba(62, 31, 71, 0.05),
+              var(--apple-specular-top) !important;
+}
+
+/* Apple Glass Floating Pill Button */
+.apple-glass-pill {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgba(62, 31, 71, 0.06),
+              inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.apple-glass-pill:hover {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: #ffffff;
+  transform: translateY(-1.5px);
+  box-shadow: 0 8px 22px rgba(62, 31, 71, 0.09),
+              inset 0 1px 2px 0 #ffffff;
+}
+.apple-glass-pill:active {
+  transform: scale(0.97);
+}
+
+/* Primary Liquid Glass Pill */
+.apple-glass-pill-primary {
+  background: linear-gradient(135deg, var(--brand-primary, #3E1F47), color-mix(in srgb, var(--brand-primary, #3E1F47) 70%, var(--brand-accent, #9C7BB5))) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 6px 20px -3px color-mix(in srgb, var(--brand-primary, #3E1F47) 40%, transparent),
+              inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.45) !important;
+  color: #ffffff !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.apple-glass-pill-primary:hover {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-primary, #3E1F47) 85%, white), var(--brand-primary, #3E1F47)) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 28px -4px color-mix(in srgb, var(--brand-primary, #3E1F47) 50%, transparent),
+              inset 0 1px 2px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Apple Glass Floating Sheet / Modal */
+.apple-glass-modal {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(40px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(210%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 30px 80px -15px rgba(25, 8, 32, 0.25),
+              inset 0 1px 2px 0 rgba(255, 255, 255, 1) !important;
+}
+
+/* Background Liquid Vibrancy */
+body {
+  background-image:
+    radial-gradient(at 10% 12%, rgba(165, 93, 133, 0.12) 0px, transparent 55%),
+    radial-gradient(at 90% 18%, rgba(67, 23, 46, 0.10) 0px, transparent 50%),
+    radial-gradient(at 35% 65%, rgba(206, 195, 203, 0.18) 0px, transparent 60%),
+    radial-gradient(at 85% 85%, rgba(165, 93, 133, 0.14) 0px, transparent 50%),
+    radial-gradient(at 15% 95%, rgba(67, 23, 46, 0.08) 0px, transparent 55%) !important;
+  background-attachment: fixed !important;
+}
