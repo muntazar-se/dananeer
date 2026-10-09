@@ -8,10 +8,7 @@ import {
   Check,
   MapPin,
   Truck,
-  ArrowRight,
   Sparkles,
-  PhoneCall,
-  ExternalLink,
 } from 'lucide-react';
 
 interface LiveStoreModalProps {
@@ -184,11 +181,11 @@ export default function LiveStoreModal({
         style={{ maxWidth: 940 }}
       >
         {/* Modal Topbar */}
-        <div className="modal-header" style={{ background: '#0B0F19', color: '#FFFFFF' }}>
+        <div className="modal-header" style={{ background: '#43172E', color: '#FFFFFF' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <span
               style={{
-                background: 'var(--brand-gold-gradient)',
+                background: 'var(--brand-accent-gradient)',
                 color: '#FFFFFF',
                 padding: '4px 10px',
                 borderRadius: 'var(--radius-full)',
@@ -207,7 +204,7 @@ export default function LiveStoreModal({
             <div
               style={{
                 fontSize: '0.82rem',
-                color: '#94A3B8',
+                color: 'var(--brand-silver-300)',
                 direction: 'ltr',
                 display: 'none',
               }}
@@ -217,7 +214,7 @@ export default function LiveStoreModal({
             <button
               className="modal-close-btn"
               onClick={onClose}
-              style={{ background: '#1E293B', color: '#FFFFFF' }}
+              style={{ background: '#57203D', color: '#FFFFFF' }}
             >
               <X size={20} />
             </button>
@@ -228,7 +225,7 @@ export default function LiveStoreModal({
         <div
           style={{
             padding: '14px 24px',
-            background: '#F8FAFC',
+            background: '#FAF5F8',
             borderBottom: '1px solid var(--border-subtle)',
             display: 'flex',
             alignItems: 'center',
@@ -254,9 +251,9 @@ export default function LiveStoreModal({
                 fontWeight: 600,
                 whiteSpace: 'nowrap',
                 transition: 'all 0.2s',
-                background: selectedStoreId === s.id ? 'var(--brand-gold-500)' : '#FFFFFF',
-                color: selectedStoreId === s.id ? '#FFFFFF' : 'var(--brand-dark)',
-                border: selectedStoreId === s.id ? '1px solid var(--brand-gold-600)' : '1px solid var(--border-subtle)',
+                background: selectedStoreId === s.id ? 'var(--brand-accent-500)' : '#FFFFFF',
+                color: selectedStoreId === s.id ? '#FFFFFF' : 'var(--brand-primary)',
+                border: selectedStoreId === s.id ? '1px solid var(--brand-accent-600)' : '1px solid var(--border-silver)',
               }}
             >
               {s.name} ({s.categoryName})
@@ -264,7 +261,7 @@ export default function LiveStoreModal({
           ))}
         </div>
 
-        <div className="modal-body" style={{ padding: 24, background: '#F8FAFC' }}>
+        <div className="modal-body" style={{ padding: 24, background: 'var(--bg-body)' }}>
           {/* Store Front Header */}
           <div
             style={{
@@ -290,29 +287,29 @@ export default function LiveStoreModal({
                     width: 60,
                     height: 60,
                     borderRadius: '50%',
-                    background: 'var(--brand-gold-100)',
-                    color: 'var(--brand-gold-700)',
+                    background: 'var(--brand-accent-100)',
+                    color: 'var(--brand-primary)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: '1.5rem',
                     fontWeight: 800,
-                    border: '2px solid var(--brand-gold-300)',
+                    border: '2px solid var(--brand-accent-300)',
                   }}
                 >
                   {currentStore.name.slice(0, 1)}
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--brand-dark)', marginBottom: 4 }}>
+                  <h4 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--brand-primary)', marginBottom: 4 }}>
                     {currentStore.name}
                   </h4>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: '0.84rem', color: 'var(--text-muted)' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                      <MapPin size={14} color="var(--brand-gold-600)" />
+                      <MapPin size={14} color="var(--brand-accent-600)" />
                       {currentStore.city}
                     </span>
                     <span>•</span>
-                    <span style={{ direction: 'ltr', color: 'var(--brand-gold-600)', fontWeight: 600 }}>
+                    <span style={{ direction: 'ltr', color: 'var(--brand-accent-600)', fontWeight: 600 }}>
                       @{currentStore.handle}
                     </span>
                   </div>
@@ -347,7 +344,7 @@ export default function LiveStoreModal({
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 24 }}>
             {/* Products Column */}
             <div>
-              <h5 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--brand-dark)', marginBottom: 14 }}>
+              <h5 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--brand-primary)', marginBottom: 14 }}>
                 المنتجات المعروضة
               </h5>
 
@@ -386,7 +383,7 @@ export default function LiveStoreModal({
                             position: 'absolute',
                             top: 4,
                             right: 4,
-                            background: 'var(--brand-dark)',
+                            background: 'var(--brand-primary)',
                             color: '#FFFFFF',
                             fontSize: '0.68rem',
                             padding: '2px 6px',
@@ -401,7 +398,7 @@ export default function LiveStoreModal({
 
                     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                       <div>
-                        <h6 style={{ fontSize: '0.98rem', fontWeight: 700, color: 'var(--brand-dark)', marginBottom: 4 }}>
+                        <h6 style={{ fontSize: '0.98rem', fontWeight: 700, color: 'var(--brand-primary)', marginBottom: 4 }}>
                           {product.name}
                         </h6>
                         <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)', lineHeight: 1.5, marginBottom: 8 }}>
@@ -410,7 +407,7 @@ export default function LiveStoreModal({
                       </div>
 
                       <div style={{ display: 'flex', alignItems: 'center', justifySelf: 'flex-end', justifyContent: 'space-between' }}>
-                        <span style={{ fontFamily: 'var(--font-arabic-heading)', fontWeight: 800, color: 'var(--brand-gold-600)', fontSize: '1.1rem' }}>
+                        <span style={{ fontFamily: 'var(--font-arabic-heading)', fontWeight: 800, color: 'var(--brand-accent-600)', fontSize: '1.1rem' }}>
                           {product.price.toLocaleString('ar-IQ')} د.ع
                         </span>
                         <button
@@ -449,10 +446,10 @@ export default function LiveStoreModal({
                     marginBottom: 16,
                   }}
                 >
-                  <span style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--brand-dark)' }}>
+                  <span style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--brand-primary)' }}>
                     سلة الشراء ({cartItemsCount})
                   </span>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--brand-gold-600)', fontWeight: 600 }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--brand-accent-600)', fontWeight: 600 }}>
                     تجهيز فوري
                   </span>
                 </div>
@@ -474,7 +471,7 @@ export default function LiveStoreModal({
                     >
                       <Check size={28} />
                     </div>
-                    <h5 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--brand-dark)', marginBottom: 6 }}>
+                    <h5 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--brand-primary)', marginBottom: 6 }}>
                       تم تجربة إرسال الطلب بنجاح! 🚀
                     </h5>
                     <p style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', marginBottom: 18 }}>
@@ -527,7 +524,7 @@ export default function LiveStoreModal({
                                 }}
                               >
                                 <div>
-                                  <div style={{ fontWeight: 600, color: 'var(--brand-dark)' }}>{p.name}</div>
+                                  <div style={{ fontWeight: 600, color: 'var(--brand-primary)' }}>{p.name}</div>
                                   <div style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>
                                     {(p.price * qty).toLocaleString('ar-IQ')} د.ع
                                   </div>
@@ -535,14 +532,14 @@ export default function LiveStoreModal({
                                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                                   <button
                                     onClick={() => removeFromCart(pId)}
-                                    style={{ width: 24, height: 24, borderRadius: 4, background: '#E2E8F0', fontWeight: 700 }}
+                                    style={{ width: 24, height: 24, borderRadius: 4, background: 'var(--brand-silver-200)', fontWeight: 700 }}
                                   >
                                     -
                                   </button>
                                   <span style={{ fontWeight: 700 }}>{qty}</span>
                                   <button
                                     onClick={() => addToCart(pId)}
-                                    style={{ width: 24, height: 24, borderRadius: 4, background: '#E2E8F0', fontWeight: 700 }}
+                                    style={{ width: 24, height: 24, borderRadius: 4, background: 'var(--brand-silver-200)', fontWeight: 700 }}
                                   >
                                     +
                                   </button>
@@ -577,14 +574,14 @@ export default function LiveStoreModal({
                               display: 'flex',
                               justifyContent: 'space-between',
                               fontWeight: 800,
-                              color: 'var(--brand-dark)',
+                              color: 'var(--brand-primary)',
                               fontSize: '1.05rem',
                               borderTop: '1px dashed var(--border-subtle)',
                               paddingTop: 8,
                             }}
                           >
                             <span>الإجمالي:</span>
-                            <span style={{ color: 'var(--brand-gold-600)' }}>
+                            <span style={{ color: 'var(--brand-accent-600)' }}>
                               {total.toLocaleString('ar-IQ')} د.ع
                             </span>
                           </div>
@@ -592,12 +589,12 @@ export default function LiveStoreModal({
 
                         <div
                           style={{
-                            background: '#FAF7EE',
-                            border: '1px solid var(--brand-gold-200)',
+                            background: 'var(--brand-accent-50)',
+                            border: '1px solid var(--brand-accent-200)',
                             padding: '10px 14px',
                             borderRadius: 'var(--radius-md)',
                             fontSize: '0.82rem',
-                            color: 'var(--brand-gold-700)',
+                            color: 'var(--brand-accent-700)',
                             marginBottom: 16,
                           }}
                         >

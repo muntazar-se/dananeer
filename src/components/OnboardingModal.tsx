@@ -162,7 +162,7 @@ export default function OnboardingModal({ isOpen, onClose }: OnboardingModalProp
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: 4 }}>
                   رقم مرجع الطلب:
                 </div>
-                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--brand-gold-600)', letterSpacing: '0.05em' }}>
+                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--brand-accent-600)', letterSpacing: '0.05em' }}>
                   {successData.referenceNumber}
                 </div>
               </div>
@@ -170,12 +170,12 @@ export default function OnboardingModal({ isOpen, onClose }: OnboardingModalProp
               <div
                 style={{
                   textAlign: 'right',
-                  background: '#FAF7EE',
-                  border: '1px solid var(--brand-gold-200)',
+                  background: 'var(--brand-accent-50)',
+                  border: '1px solid var(--brand-accent-200)',
                   borderRadius: 'var(--radius-md)',
                   padding: 16,
                   fontSize: '0.9rem',
-                  color: 'var(--brand-gold-700)',
+                  color: 'var(--brand-accent-700)',
                   marginBottom: 24,
                 }}
               >

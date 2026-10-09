@@ -20,13 +20,6 @@ export default function DananirBrand({
     xl: 60,
   };
 
-  const textSizes = {
-    sm: 'text-xl',
-    md: 'text-2xl',
-    lg: 'text-3xl',
-    xl: 'text-4xl',
-  };
-
   const currentIconSize = iconSizes[size];
 
   return (
@@ -41,14 +34,18 @@ export default function DananirBrand({
           aria-hidden="true"
         >
           <defs>
-            <linearGradient id="dananirGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#DFB751" />
-              <stop offset="50%" stopColor="#C3932E" />
-              <stop offset="100%" stopColor="#9C721D" />
+            <linearGradient id="dananirAccentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#C485A9" />
+              <stop offset="50%" stopColor="#A55D85" />
+              <stop offset="100%" stopColor="#733759" />
             </linearGradient>
-            <linearGradient id="dananirDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1E293B" />
-              <stop offset="100%" stopColor="#0B0F19" />
+            <linearGradient id="dananirPrimaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#57203D" />
+              <stop offset="100%" stopColor="#43172E" />
+            </linearGradient>
+            <linearGradient id="dananirSilverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#F4F0F3" />
+              <stop offset="100%" stopColor="#CEC3CB" />
             </linearGradient>
           </defs>
 
@@ -59,22 +56,22 @@ export default function DananirBrand({
             width="44"
             height="44"
             rx="14"
-            fill="url(#dananirDarkGrad)"
-            stroke="url(#dananirGoldGrad)"
+            fill="url(#dananirPrimaryGrad)"
+            stroke="url(#dananirAccentGrad)"
             strokeWidth="2.5"
           />
 
           {/* Dynamic Dinar Crescent / Arch of Growth */}
           <path
             d="M 14 24 C 14 17.5 19 13 25.5 13 C 30 13 33.5 15.5 35 19 C 32.5 17.5 29.5 16.5 26.5 16.5 C 21.5 16.5 18 20 18 24 C 18 28 21.5 31.5 26.5 31.5 C 29.5 31.5 32.5 30.5 35 29 C 33.5 32.5 30 35 25.5 35 C 19 35 14 30.5 14 24 Z"
-            fill="url(#dananirGoldGrad)"
+            fill="url(#dananirAccentGrad)"
           />
 
-          {/* Commerce Dinar Core Coin Spark */}
-          <circle cx="28" cy="24" r="3.5" fill="#DFB751" />
+          {/* Commerce Dinar Core Coin Spark in Refined Silver */}
+          <circle cx="28" cy="24" r="3.5" fill="url(#dananirSilverGrad)" />
           <path
             d="M 33 21 L 35 24 L 33 27"
-            stroke="#DFB751"
+            stroke="#CEC3CB"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

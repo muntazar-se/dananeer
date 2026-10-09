@@ -150,19 +150,19 @@ export default function LandingPage() {
               {/* Honest Micro Trust Markers */}
               <div className="hero-trust-badges">
                 <div className="hero-trust-item">
-                  <Check size={16} color="var(--brand-gold-600)" />
+                  <Check size={16} color="var(--brand-accent-600)" />
                   <span>بدون خبرة برمجية</span>
                 </div>
                 <div className="hero-trust-item">
-                  <Check size={16} color="var(--brand-gold-600)" />
+                  <Check size={16} color="var(--brand-accent-600)" />
                   <span>اشتراك سنوي واضح</span>
                 </div>
                 <div className="hero-trust-item">
-                  <Check size={16} color="var(--brand-gold-600)" />
+                  <Check size={16} color="var(--brand-accent-600)" />
                   <span>0% عمولة على المبيعات</span>
                 </div>
                 <div className="hero-trust-item">
-                  <Check size={16} color="var(--brand-gold-600)" />
+                  <Check size={16} color="var(--brand-accent-600)" />
                   <span>دعم محلي في العراق</span>
                 </div>
               </div>
@@ -254,7 +254,7 @@ export default function LandingPage() {
                                 position: 'absolute',
                                 top: 8,
                                 right: 8,
-                                background: 'var(--brand-gold-500)',
+                                background: 'var(--brand-accent-500)',
                                 color: '#FFF',
                                 fontSize: '0.7rem',
                                 padding: '2px 8px',
@@ -579,7 +579,7 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <div className="flow-arrow-down" style={{ color: 'var(--brand-gold-600)' }}>↓</div>
+                  <div className="flow-arrow-down" style={{ color: 'var(--brand-accent-600)' }}>↓</div>
 
                   <div className="flow-step-item">
                     <div className="flow-icon-circle icon-gold">3</div>
@@ -589,12 +589,12 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <div className="flow-arrow-down" style={{ color: 'var(--brand-gold-600)' }}>↓</div>
+                  <div className="flow-arrow-down" style={{ color: 'var(--brand-accent-600)' }}>↓</div>
 
-                  <div className="flow-step-item" style={{ background: '#FAF7EE', border: '1.5px solid var(--brand-gold-300)' }}>
+                  <div className="flow-step-item" style={{ background: 'var(--brand-accent-50)', border: '1.5px solid var(--brand-accent-300)' }}>
                     <div className="flow-icon-circle icon-gold">4</div>
                     <div>
-                      <div className="flow-text-title" style={{ color: 'var(--brand-gold-700)' }}>لوحة تحكم دنانير جاهزة للشحن!</div>
+                      <div className="flow-text-title" style={{ color: 'var(--brand-accent-700)' }}>لوحة تحكم دنانير جاهزة للشحن!</div>
                       <div className="flow-text-desc">إشعار فوري بالطلب مع بيانات المشتري جاهزة لشركة التوصيل</div>
                     </div>
                   </div>
@@ -831,7 +831,7 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '0.85rem', color: '#94A3B8' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: '0.85rem', color: 'var(--brand-silver-300)' }}>
                   <span>متجر: بوتيك نينوى</span>
                   <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10B981' }} />
                 </div>
@@ -842,7 +842,7 @@ export default function LandingPage() {
                 <div className="dash-stats-row">
                   <div className="dash-stat-box">
                     <div className="dash-stat-label">إجمالي مبيعات اليوم</div>
-                    <div className="dash-stat-num" style={{ color: 'var(--brand-gold-300)' }}>
+                    <div className="dash-stat-num" style={{ color: 'var(--brand-silver-100)' }}>
                       1,840,000 د.ع
                     </div>
                   </div>
@@ -889,7 +889,7 @@ export default function LandingPage() {
                         <td>مريم الزبيدي</td>
                         <td>بغداد (المنصور)</td>
                         <td>عطر العنبر الملكي (50 مل)</td>
-                        <td style={{ fontWeight: 700, color: 'var(--brand-gold-300)' }}>48,000 د.ع</td>
+                        <td style={{ fontWeight: 700, color: 'var(--brand-silver-100)' }}>48,000 د.ع</td>
                         <td>الدفع عند الاستلام</td>
                         <td>
                           <span className="status-pill status-pending">قيد التجهيز</span>
@@ -900,7 +900,7 @@ export default function LandingPage() {
                         <td>كرار حيدر</td>
                         <td>البصرة (الجزائر)</td>
                         <td>ساعة كلاسيك + سوار ذهبي</td>
-                        <td style={{ fontWeight: 700, color: 'var(--brand-gold-300)' }}>65,000 د.ع</td>
+                        <td style={{ fontWeight: 700, color: 'var(--brand-silver-100)' }}>65,000 د.ع</td>
                         <td>الدفع عند الاستلام</td>
                         <td>
                           <span className="status-pill status-delivering">خرج للتوصيل</span>
@@ -911,7 +911,7 @@ export default function LandingPage() {
                         <td>شهد خليل</td>
                         <td>أربيل (عينكاوة)</td>
                         <td>فستان سهرة زمردي (M)</td>
-                        <td style={{ fontWeight: 700, color: 'var(--brand-gold-300)' }}>85,000 د.ع</td>
+                        <td style={{ fontWeight: 700, color: 'var(--brand-silver-100)' }}>85,000 د.ع</td>
                         <td>الدفع عند الاستلام</td>
                         <td>
                           <span className="status-pill status-completed">تم التسليم</span>
@@ -922,7 +922,7 @@ export default function LandingPage() {
                         <td>علي الكعبي</td>
                         <td>النجف الأشرف</td>
                         <td>شمعة خشب الصندل العضوية</td>
-                        <td style={{ fontWeight: 700, color: 'var(--brand-gold-300)' }}>24,000 د.ع</td>
+                        <td style={{ fontWeight: 700, color: 'var(--brand-silver-100)' }}>24,000 د.ع</td>
                         <td>الدفع عند الاستلام</td>
                         <td>
                           <span className="status-pill status-completed">تم التسليم</span>
@@ -1505,7 +1505,7 @@ export default function LandingPage() {
           <div className="container">
             <div className="final-cta-content">
               <div style={{ marginBottom: 20 }}>
-                <span className="badge-pill badge-gold" style={{ background: 'rgba(222, 184, 83, 0.15)', color: '#DFB751', border: '1px solid rgba(222, 184, 83, 0.3)' }}>
+                <span className="badge-pill badge-accent" style={{ background: 'rgba(165, 93, 133, 0.22)', color: 'var(--brand-silver-100)', border: '1px solid rgba(206, 195, 203, 0.4)' }}>
                   <Sparkles size={14} />
                   «من دينار… إلى دنانير!»
                 </span>
@@ -1551,7 +1551,7 @@ export default function LandingPage() {
             {/* Brand column */}
             <div>
               <DananirBrand size="md" light />
-              <p style={{ marginTop: 14, fontSize: '0.94rem', color: '#94A3B8', maxWidth: 300, lineHeight: 1.7 }}>
+              <p style={{ marginTop: 14, fontSize: '0.94rem', color: 'var(--brand-silver-300)', maxWidth: 300, lineHeight: 1.7 }}>
                 من حساب إنستا… إلى متجر إلكتروني كامل.
                 <br />
                 نظام التجارة الإلكترونية العراقي المخصص لتجار إنستغرام.
@@ -1594,7 +1594,7 @@ export default function LandingPage() {
                 <li>
                   <button
                     onClick={() => setIsOnboardOpen(true)}
-                    style={{ color: 'var(--brand-gold-400)', fontWeight: 700, textAlign: 'right' }}
+                    style={{ color: 'var(--brand-accent-300)', fontWeight: 700, textAlign: 'right' }}
                   >
                     ابدأ متجرك
                   </button>
