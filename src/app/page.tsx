@@ -32,6 +32,7 @@ import Navbar from '@/components/Navbar';
 import DananirBrand from '@/components/DananirBrand';
 import OnboardingModal from '@/components/OnboardingModal';
 import LiveStoreModal from '@/components/LiveStoreModal';
+import PaletteSwitcher from '@/components/PaletteSwitcher';
 
 export default function LandingPage() {
   const [isOnboardOpen, setIsOnboardOpen] = useState(false);
@@ -98,6 +99,7 @@ export default function LandingPage() {
       <Navbar
         onOpenOnboard={() => setIsOnboardOpen(true)}
         onOpenDemo={() => setIsDemoOpen(true)}
+        onOpenPalettes={() => window.dispatchEvent(new CustomEvent('open-dananir-palettes'))}
       />
 
       <main>
@@ -1639,6 +1641,9 @@ export default function LandingPage() {
         onOpenOnboard={() => setIsOnboardOpen(true)}
         initialStoreId={demoStoreId}
       />
+
+      {/* 50 Master Palettes Live Switcher */}
+      <PaletteSwitcher />
     </div>
   );
 }

@@ -2,15 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ArrowLeft, Sparkles, ExternalLink } from 'lucide-react';
+import { Menu, X, ArrowLeft, Sparkles, ExternalLink, Palette } from 'lucide-react';
 import DananirBrand from './DananirBrand';
 
 interface NavbarProps {
   onOpenOnboard: () => void;
   onOpenDemo: () => void;
+  onOpenPalettes?: () => void;
 }
 
-export default function Navbar({ onOpenOnboard, onOpenDemo }: NavbarProps) {
+export default function Navbar({ onOpenOnboard, onOpenDemo, onOpenPalettes }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -49,13 +50,24 @@ export default function Navbar({ onOpenOnboard, onOpenDemo }: NavbarProps) {
 
         {/* CTA Actions */}
         <div className="nav-actions">
-          <button
-            onClick={onOpenDemo}
-            className="btn btn-ghost"
-            style={{ fontSize: '0.92rem', padding: '10px 18px', display: 'none' }}
-          >
-            تجربة متجر
-          </button>
+          {onOpenPalettes && (
+            <button
+              onClick={onOpenPalettes}
+              className="btn btn-outline"
+              style={{
+                fontSize: '0.88rem',
+                padding: '9px 16px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                borderColor: 'var(--brand-silver-300)',
+              }}
+              title="تغيير مجموعة الألوان (50 مجموعة)"
+            >
+              <Palette size={16} color="var(--brand-accent-500)" />
+              <span>الألوان (50)</span>
+            </button>
+          )}
 
           <button
             onClick={onOpenOnboard}
@@ -92,6 +104,20 @@ export default function Navbar({ onOpenOnboard, onOpenDemo }: NavbarProps) {
           ))}
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 12 }}>
+            {onOpenPalettes && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenPalettes();
+                }}
+                className="btn btn-outline"
+                style={{ width: '100%', justifyContent: 'center', borderColor: 'var(--brand-silver-300)' }}
+              >
+                <Palette size={16} color="var(--brand-accent-500)" />
+                <span>مجموعات الألوان (50)</span>
+              </button>
+            )}
+
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
